@@ -3,19 +3,21 @@
 
 /* Where the global config resides. */
 #ifndef GLOBAL_CONF
-#define GLOBAL_CONF			"/etc/ondirrc"
+#define GLOBAL_CONF "/etc/ondirrc"
 #endif
 /* If your code blocks exceed this, something weird is going on. */
-#define MAX_SECTION_SIZE	16384
+#define MAX_SECTION_SIZE 16384
 /* Use .onenter or .onleave? */
 /* #define USE_ONENTERLEAVE */
 
-typedef enum {
+typedef enum
+{
 	PT_ENTER,
 	PT_LEAVE,
 } pathtype_t;
 
-struct odpath_t {
+struct odpath_t
+{
 	const char **paths, *content;
 	int npaths, final;
 	pathtype_t type;
